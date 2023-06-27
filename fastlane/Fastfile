@@ -36,3 +36,7 @@ lane :build_and_export do
         testers: "o.frankiv@ukma.edu.ua"
     )
 end
+
+lane :take_screenshots do
+    snapshot()
+end

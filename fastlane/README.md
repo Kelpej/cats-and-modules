@@ -21,6 +21,14 @@ For _fastlane_ installation instructions, see [Installing _fastlane_](https://do
 
 
 
+### take_screenshots
+
+```sh
+[bundle exec] fastlane take_screenshots
+```
+
+
+
 ----
 
 
