@@ -88,7 +88,5 @@ screenshots/
 # After new code Injection tools there's a generated folder /iOSInjectionProject
 # https://github.com/johnno1962/injectionforxcode
 
-<<<<<<< HEAD
-=======
 iOSInjectionProject/
->>>>>>> 43cf464 (edit .gitignore)
+
