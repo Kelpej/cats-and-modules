@@ -10,9 +10,7 @@ scheme("CatsAndModules")
 
 clean(true)
 
-export_options({
-	method: "development"
-})
+export_options({ method: "development" })
 
 # sdk("iphoneos9.0")
 
