@@ -21,3 +21,18 @@ platform :ios do
     capture_screenshots(scheme: "CatsAndModules")
   end
 end
+
+lane :build_and_export do
+    gym(
+        configuration: "Release"
+    )
+    
+    release_notes = "Some notes"
+
+    firebase_app_distribution(
+        app: "1:582683036276:ios:3ea4fc2550574f52c29f21",
+        firebase_cli_token: "1//0ciJWqGQL8o98CgYIARAAGAwSNgF-L9Irs7_LfC8fexPNiTSgCGGxDLbox-TKqYf-uBqxWx_w009LbesKroim-HQDTArugUCyNA",
+        release_notes: release_notes,
+        testers: "o.frankiv@ukma.edu.ua"
+    )
+end
