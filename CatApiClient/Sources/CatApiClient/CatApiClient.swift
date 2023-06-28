@@ -1,12 +1,6 @@
-import SwiftUI
-import UIKit
+import Foundation
 
-public struct Cat: Identifiable {
-    public let id: String
-    public let image: UIImage
-}
-
-private struct CatResponse: Decodable {
+public struct CatResponse: Decodable {
     let id: String
     let url: String
     let width: Int
@@ -15,33 +9,34 @@ private struct CatResponse: Decodable {
 
 @available(iOS 15.0, *)
 public struct CatClient {
-    public init() {
+    private let url: URL;
+    
+    public init(limit: Int) {
+        let animal = Bundle.main.infoDictionary?["Animal"] as? String ?? "CATS"
         
+        if animal == "DOGS" {
+            guard let url = URL(string: "https://api.thedogapi.com/v1/images/search?limit=\(limit)") else {
+                fatalError("Invalid API URL")
+            }
+            
+            self.url = url
+        } else {
+            guard let url = URL(string: "https://api.thecatapi.com/v1/images/search?limit=\(limit)") else {
+                fatalError("Invalid API URL")
+            }
+            
+            self.url = url
+        }
     }
     
-    public func getCats(quantity: Int) async throws -> [Cat]  {
+    @available(macOS 12.0, *)
+    public func getCats(quantity: Int) async throws -> [CatResponse]  {
         guard let url = URL(string: "https://api.thecatapi.com/v1/images/search?limit=\(quantity)") else {
             fatalError("Invalid API URL")
         }
         
         let (data, _) = try! await URLSession.shared.data(from: url)
         
-        let responses = try JSONDecoder().decode([CatResponse].self, from: data)
-        
-        var cats = [Cat]()
-        
-        for response in responses {
-            guard let imageUrl = URL(string: response.url) else {
-                fatalError("Invalid Image URL")
-            }
-            
-            let (data, _) = try await URLSession.shared.data(from: imageUrl)
-            
-            if let image = UIImage(data: data) {
-                cats.append(Cat(id: response.id, image: image))
-            }
-        }
-        
-        return cats
+        return try JSONDecoder().decode([CatResponse].self, from: data)
     }
 }

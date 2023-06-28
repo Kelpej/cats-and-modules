@@ -17,12 +17,12 @@
 		6C53B99A2A4AC31800F61187 /* FirebasePerformance in Frameworks */ = {isa = PBXBuildFile; productRef = 6C53B9992A4AC31800F61187 /* FirebasePerformance */; };
 		6C53B9AB2A4AC50E00F61187 /* CatListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C53B9A92A4AC50E00F61187 /* CatListView.swift */; };
 		6C53B9AC2A4AC50E00F61187 /* FullScreenImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C53B9AA2A4AC50E00F61187 /* FullScreenImageView.swift */; };
-		6C53B9AF2A4AC5F800F61187 /* CatApiClient in Frameworks */ = {isa = PBXBuildFile; productRef = 6C53B9AE2A4AC5F800F61187 /* CatApiClient */; };
 		6C53B9B12A4AC66400F61187 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6C53B9B02A4AC66400F61187 /* GoogleService-Info.plist */; };
 		6C53B9BB2A4AC74F00F61187 /* Gemfile in Resources */ = {isa = PBXBuildFile; fileRef = 6C53B9B82A4AC74E00F61187 /* Gemfile */; };
 		6C53B9BC2A4AC74F00F61187 /* fastlane in Resources */ = {isa = PBXBuildFile; fileRef = 6C53B9B92A4AC74E00F61187 /* fastlane */; };
 		6C53B9BD2A4AC74F00F61187 /* Gemfile.lock in Resources */ = {isa = PBXBuildFile; fileRef = 6C53B9BA2A4AC74F00F61187 /* Gemfile.lock */; };
 		6C53B9C02A4AC78900F61187 /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C53B9BE2A4AC77E00F61187 /* SnapshotHelper.swift */; };
+		6C53B9EC2A4B6DA300F61187 /* CatApiClient in Frameworks */ = {isa = PBXBuildFile; productRef = 6C53B9EB2A4B6DA300F61187 /* CatApiClient */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +42,19 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		6C53B9DE2A4B6C3200F61187 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		6C53B9642A4AC1A800F61187 /* CatsAndModules.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CatsAndModules.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C53B9672A4AC1A800F61187 /* CatsAndModulesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatsAndModulesApp.swift; sourceTree = "<group>"; };
@@ -52,7 +65,6 @@
 		6C53B97E2A4AC1A900F61187 /* CatsAndModulesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CatsAndModulesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C53B9822A4AC1A900F61187 /* CatsAndModulesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatsAndModulesUITests.swift; sourceTree = "<group>"; };
 		6C53B9842A4AC1A900F61187 /* CatsAndModulesUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatsAndModulesUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		6C53B9A82A4AC46500F61187 /* CatApiClient */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = CatApiClient; path = ../../CatsAndModules_SerhiiHryhorenko/CatApiClient; sourceTree = "<group>"; };
 		6C53B9A92A4AC50E00F61187 /* CatListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatListView.swift; sourceTree = "<group>"; };
 		6C53B9AA2A4AC50E00F61187 /* FullScreenImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FullScreenImageView.swift; sourceTree = "<group>"; };
 		6C53B9B02A4AC66400F61187 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -61,6 +73,7 @@
 		6C53B9BA2A4AC74F00F61187 /* Gemfile.lock */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Gemfile.lock; path = ../Gemfile.lock; sourceTree = "<group>"; };
 		6C53B9BE2A4AC77E00F61187 /* SnapshotHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapshotHelper.swift; sourceTree = "<group>"; };
 		6C53B9C12A4AF1E600F61187 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		6C53B9EA2A4B6D2B00F61187 /* CatApiClient */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = CatApiClient; path = ../../CatsAndModules_SerhiiHryhorenko/CatApiClient; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,7 +83,7 @@
 			files = (
 				6C53B99A2A4AC31800F61187 /* FirebasePerformance in Frameworks */,
 				6C53B9982A4AC30700F61187 /* FirebaseCrashlytics in Frameworks */,
-				6C53B9AF2A4AC5F800F61187 /* CatApiClient in Frameworks */,
+				6C53B9EC2A4B6DA300F61187 /* CatApiClient in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -166,7 +179,7 @@
 		6C53B9A72A4AC46500F61187 /* Packages */ = {
 			isa = PBXGroup;
 			children = (
-				6C53B9A82A4AC46500F61187 /* CatApiClient */,
+				6C53B9EA2A4B6D2B00F61187 /* CatApiClient */,
 			);
 			name = Packages;
 			sourceTree = "<group>";
@@ -182,6 +195,7 @@
 				6C53B9612A4AC1A800F61187 /* Frameworks */,
 				6C53B9622A4AC1A800F61187 /* Resources */,
 				6C53B9AD2A4AC57400F61187 /* Firebase Crashlytics */,
+				6C53B9DE2A4B6C3200F61187 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -191,7 +205,7 @@
 			packageProductDependencies = (
 				6C53B9972A4AC30700F61187 /* FirebaseCrashlytics */,
 				6C53B9992A4AC31800F61187 /* FirebasePerformance */,
-				6C53B9AE2A4AC5F800F61187 /* CatApiClient */,
+				6C53B9EB2A4B6DA300F61187 /* CatApiClient */,
 			);
 			productName = CatsAndModules;
 			productReference = 6C53B9642A4AC1A800F61187 /* CatsAndModules.app */;
@@ -711,7 +725,7 @@
 			package = 6C53B9912A4AC2EC00F61187 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebasePerformance;
 		};
-		6C53B9AE2A4AC5F800F61187 /* CatApiClient */ = {
+		6C53B9EB2A4B6DA300F61187 /* CatApiClient */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = CatApiClient;
 		};

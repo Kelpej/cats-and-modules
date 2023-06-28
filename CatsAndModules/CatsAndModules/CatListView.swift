@@ -15,7 +15,7 @@ struct CatListView: View {
     @State private var expandedCat: Cat? = nil
     @State private var isLoading = false
     
-    let client = CatClient()
+    let client = CatClient(limit: 10)
     
     var body: some View {
         VStack {
@@ -46,20 +46,21 @@ struct CatListView: View {
         
         Task.init {
             defer {
-                networkTrace?.stop()
                 isLoading.toggle()
             }
             
             do {
                 isLoading.toggle()
                 
-                let fetchedCats = try await client.getCats(quantity: 10)
+                let fetchedCats = try await client.getCats()
                 
                 DispatchQueue.main.async {
                     cats = fetchedCats
+                    networkTrace?.stop()
                 }
             } catch {
                 print("Fetching cats error: \(error)")
+                
             }
         }
     }

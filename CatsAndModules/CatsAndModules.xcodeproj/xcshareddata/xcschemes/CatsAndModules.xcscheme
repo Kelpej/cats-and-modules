@@ -60,6 +60,17 @@
                ReferencedContainer = "container:CatsAndModules.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "6C53B9CF2A4B6C3200F61187"
+               BuildableName = "CatApiClientTests.xctest"
+               BlueprintName = "CatApiClientTests"
+               ReferencedContainer = "container:CatsAndModules.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction
